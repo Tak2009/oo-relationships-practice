@@ -22,6 +22,9 @@ t2 = Trip.new(g2, l2)
 t3 = Trip.new(g1, l3)
 t4 = Trip.new(g2, l4)
 t5 = Trip.new(g2, l4)
+t6 = Trip.new(g2, l4)
+t7 = Trip.new(g2, l4)
+t8 = Trip.new(g2, l4)
 
 
 

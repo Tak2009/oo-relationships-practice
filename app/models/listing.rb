@@ -6,7 +6,7 @@ class Listing
  
     @@all = []
 
-    def initialize(name,city)
+    def initialize(name, city)
         @name = name
         @city = city
         @@all << self #name and city go in @@all
@@ -35,7 +35,7 @@ class Listing
     end
 
     def self.most_popular  
-           @@all.max_by {|l|l.trip_count}     # here, only methods available in this class can be used.
+        @@all.max_by {|l|l.trip_count} # here, only methods available in this class can be used.
         
     end
 
