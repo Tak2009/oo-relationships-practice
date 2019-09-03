@@ -1,12 +1,13 @@
 class Listing
-  # has many 
-   # has many to a trip
+   # has many trips
+   # has many guests through trips
 
     attr_reader :city
  
     @@all = []
 
-    def initialize(city)
+    def initialize(name,city)
+        @name = name
         @city = city
         @@all << self
     end

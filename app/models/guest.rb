@@ -1,6 +1,6 @@
 class Guest
     # has many trips
-    # has many listings through listing
+    # has many listings through trips
 
     attr_reader :name
  
