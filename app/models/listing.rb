@@ -8,7 +8,7 @@ class Listing
 
     def initialize(city)
         @city = city
-        self.class.all << self
+        @@all << self
     end
 
     def self.all
@@ -16,23 +16,15 @@ class Listing
     end
 
     def guests
-        Trip.all.select {|t| t.city == self}
-        
+        Trip.all.select {|t| t.listing == self}
     end
-
+   
     def trips
         self.guests.map {|t| t.trip}
     end
 
-    def trip_count
-        trips.length
-    end
+    
 
-    def self.find_all_by_city(city)
-    self.all.select {|l| l.city == city}
-    end
 
-    def self.most_popular
-        self.all.max_by {|listings| listings.trip_count}
-    end
+    
 end

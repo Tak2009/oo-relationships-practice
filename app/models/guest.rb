@@ -2,12 +2,12 @@ class Guest
     # has many trips
     # has many listings through listing
 
-    attr_reader :guest
+    attr_reader :name
  
     @@all = []
 
-    def initialize(guest)
-        @guest = guest
+    def initialize(name)
+        @name = name
         self.class.all << self
     end
 
@@ -31,8 +31,8 @@ class Guest
         self.all
     end
 
-    def self.find_all_by_name(guest)
-        self.all.select {|g| g.guest == guest}
+    def self.find_all_by_name(name)
+        self.all.select {|g| g.name == name}
     end
 
 end

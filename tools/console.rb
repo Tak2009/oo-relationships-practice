@@ -24,10 +24,7 @@ t3 = Trip.new(g1, l3)
 t4 = Trip.new(g2, l4)
 t5 = Trip.new(g2, l4)
 
-puts l1.guests
-puts l1.trips
-puts l1.trip_count
-puts Listing.all
+
 
 binding.pry
 0
