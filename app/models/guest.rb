@@ -2,13 +2,13 @@ class Guest
     # has many trips
     # has many listings through trips
 
-    attr_reader :name
+    attr_reader :name # we need to read those by .notsation later
  
     @@all = []
 
     def initialize(name)
         @name = name
-        self.class.all << self
+        @@all << self # name goes in @@all
     end
 
     def self.all
@@ -16,23 +16,24 @@ class Guest
     end
 
     def listings
-        Trip.all.select {|t| t.guest == self}
+        self.trips.map {|t| t.listing}
     end
 
     def trips
-        self.listings.map {|t| t.trip}
+        
+        Trip.all.select {|t| t.guest == self}
     end
 
     def trip_count
-        trips.count
+        trips.length
     end
 
     def self.pro_taveller
-        self.all
+        @@all.select {|g| g.trip_count > 1}
     end
 
-    def self.find_all_by_name(name)
-        self.all.select {|g| g.name == name}
+    def self.find_all_by_city(name)
+        @@all.select {|g| g.name == name} # here, only methods available in this class can be used.
     end
 
 end
