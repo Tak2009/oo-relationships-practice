@@ -23,6 +23,10 @@ class Guest
         self.trips.map {|t| t.listing}
     end
 
+    def listings_name # I made up for practice
+        self.listings.map {|l| l.name}
+    end
+    
     def trip_count
         trips.length
     end

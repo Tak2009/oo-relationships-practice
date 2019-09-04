@@ -17,15 +17,17 @@ class Listing
      end
  
      def trips
-        # mistake: self.guests.map {|t| t.trip}
         Trip.all.select {|t| t.listing == self} # #trips calls Trip.allxxx and hence .listing is used in here
      end
 
      def guests
-         # mistake: Trip.all.select {|t| t.listing == self}
          self.trips.map {|t| t.guest} # #trips calls Trip.allxxx and hence .guest can be used within this instance method
      end
     
+     def guests_name # I made this up for myself, not in the question list
+        self.guests.map {|g| g.name} # #trips calls Trip.allxxx and hence .guest can be used within this instance method
+     end
+
      def trip_count
          trips.length
      end
