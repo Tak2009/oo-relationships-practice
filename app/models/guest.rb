@@ -27,8 +27,8 @@ class Guest
         trips.length
     end
 
-    def self.pro_taveller
-        @@all.select {|g| g.trip_count > 1}
+    def self.pro_traveller
+        @@all.select.{|g| g.trip_count > 1}
     end
 
     def self.find_all_by_city(name)
