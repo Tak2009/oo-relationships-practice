@@ -15,12 +15,12 @@ class Guest
         @@all
     end
 
-    def listings
-        self.trips.map {|t| t.listing}
-    end
-
     def trips
         Trip.all.select {|t| t.guest == self}
+    end
+
+    def listings
+        self.trips.map {|t| t.listing}
     end
 
     def trip_count

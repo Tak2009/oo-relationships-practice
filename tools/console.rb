@@ -29,10 +29,5 @@ m6 = Trip.new(g1,l6)
 m7 = Trip.new(g1,l2)
 m8 = Trip.new(g1,l3)
 
-
-
-
-
-
 binding.pry
-0
+"Start"
