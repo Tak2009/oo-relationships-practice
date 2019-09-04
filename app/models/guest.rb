@@ -28,10 +28,10 @@ class Guest
     end
 
     def self.pro_traveller
-        @@all.select.{|g| g.trip_count > 1}
+        @@all.select {|t| t.trip_count > 1}
     end
 
-    def self.find_all_by_city(name)
+    def self.find_all_by_name(name)
         @@all.select {|g| g.name == name} # here, only methods available in this class can be used.
     end
 
