@@ -1,4 +1,4 @@
-class Ingredients
+class Ingredient
 
     attr_reader :name, :calorie, :dessert, :bakery 
 

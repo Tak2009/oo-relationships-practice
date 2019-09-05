@@ -1,4 +1,4 @@
-class Dessert
+class Bakery
 
     attr_reader :name
 

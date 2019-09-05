@@ -14,7 +14,7 @@ class Dessert
     end
 
     def ingredients
-        Ingredients.all.select {|i| i.dessert == self }
+        Ingredient.all.select {|i| i.dessert == self }
     end
 
 end
