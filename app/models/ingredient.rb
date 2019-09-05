@@ -1,6 +1,6 @@
 class Ingredients
 
-    attr_reader :name, :calorie, :dessert, :bakery, 
+    attr_reader :name, :calorie, :dessert, :bakery 
 
     @@all = []
 

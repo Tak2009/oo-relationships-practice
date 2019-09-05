@@ -1,6 +1,6 @@
 class Dessert
 
-    attr_reader :name, 
+    attr_reader :name
 
     @@all = []
 
@@ -14,6 +14,7 @@ class Dessert
     end
 
     def ingredients
+        Ingredients.all.select {|i| i.dessert == self }
     end
 
 end
