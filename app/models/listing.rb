@@ -33,6 +33,7 @@ class Listing
      end
      
      def self.find_all_by_city(city)
+         
          @@all.select {|l| l.city == city} # here, only methods available in this class can be used.
      end
  
