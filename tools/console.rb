@@ -24,5 +24,7 @@ i4 = Ingredient.new("Honey", 100, d2, b2)
 i5 = Ingredient.new("Chocolate", 5, d2, b2)
 i6 = Ingredient.new("flour", 50, d2, b2)
 
+p b1.desserts
+
 binding.pry
 "Start"
